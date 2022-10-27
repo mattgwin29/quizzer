@@ -49,6 +49,7 @@ export const QuizList = ({
                         ></QuizView>
                     );
                 }
+                return (<div></div>);
             })}
         </div>
     );

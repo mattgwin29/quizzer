@@ -18,14 +18,14 @@ export const QuizEdit = ({
     const editQuestion = (questionId: number, newQuestion: Question) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.map((q: Question): Question => (q.id == questionId) ? newQuestion: q)
+            questionList: newQuiz.questionList.map((q: Question): Question => (q.id === questionId) ? newQuestion: q)
         })
     };
 
     const removeQuestion = (questionId: number) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.filter((q: Question) : boolean => (q.id != questionId))
+            questionList: newQuiz.questionList.filter((q: Question) : boolean => (q.id !== questionId))
         });
     };
 
@@ -154,9 +154,7 @@ export const QuizEdit = ({
                             deleteQuiz(quiz.id);
                             resetView();
                         }}
-                    >
-                        Delete Quiz
-                    </Button>
+                    >Delete Quiz</Button>
                 </div>
             </div>
         </div>
